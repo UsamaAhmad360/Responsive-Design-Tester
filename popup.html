@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Design Tester</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f9;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+    .container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    select:focus, button:focus {
+      outline: none;
+      border-color: #4a90e2;
+    }
+    .orientation-group {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+    .orientation-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+    }
+    .orientation-group input {
+      margin-right: 5px;
+    }
+    button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Responsive Tester</h2>
+    <div class="form-group">
+      <label for="categorySelect">Device Category:</label>
+      <select id="categorySelect"></select>
+    </div>
+    <div class="form-group">
+      <label for="subcategorySelect">Brand / Series:</label>
+      <select id="subcategorySelect"></select>
+    </div>
+    <div class="form-group">
+      <label for="deviceSelect">Device Model:</label>
+      <select id="deviceSelect"></select>
+    </div>
+    <div class="form-group">
+      <label>Orientation:</label>
+      <div class="orientation-group">
+        <label><input type="radio" name="orientation" value="portrait" checked> Portrait</label>
+        <label><input type="radio" name="orientation" value="landscape"> Landscape</label>
+      </div>
+    </div>
+    <button id="testBtn">Open Tester</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
